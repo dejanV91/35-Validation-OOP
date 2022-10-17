@@ -15,5 +15,11 @@
             "js" : ["main.js"]
         }
 
+    ],
+    "web_accessible_resources" : [
+        {
+            "matches" : ["https://*.google.com/*"],
+            "resources" : ["images/icon128.png"]
+        }
     ]
 } 
