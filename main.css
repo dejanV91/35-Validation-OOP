@@ -1,3 +1,16 @@
 html body{
-    background-color: blue;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(65,65,65,1) 35%, rgba(153,153,153,1) 100%);
+}
+
+#extabar{
+    background-color: black;
+}
+
+.vcVZ7d #SIvCob{
+    color: white;
+}
+
+.vcVZ7d #SIvCob a{
+    color: yellow;
 }
