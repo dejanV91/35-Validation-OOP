@@ -11,7 +11,7 @@ let config = {
         maxLength: 50
     },
 
-    "emal": {
+    "email": {
         required: true,
         email: true,
         minLength: 5,
