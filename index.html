@@ -11,23 +11,27 @@
     <form id="form_section">
         <h1>Registracija korisnika</h1>
         <div>
-            <label for="ime_prezime">Ime i prezime:</label>
+            <label for="ime_prezime">Ime i prezime: *</label>
             <input id="ime_prezime" type="text" name="ime_prezime" placeholder="Niko Nikolic">
         </div>
         <div>
-            <label for="korisnicko_ime">Korisnicko ime:</label>
+            <label for="korisnicko_ime">Korisnicko ime: *</label>
             <input id="korisnicko_ime" type="text" name="korisnicko_ime" placeholder="Niko">
         </div>
         <div>
-            <label for="email">Email adresa:</label>
+            <label for="email">Email adresa: *</label>
             <input id="email" type="text" name="email" placeholder="nikonikolic@gmail.com">
         </div>
         <div>
-            <label for="lozinka">Lozinka:</label>
+            <label for="phone">Broj telefona:</label>
+            <input id="phone" type="text" name="phone" placeholder="+381 64 356 8549">
+        </div>
+        <div>
+            <label for="lozinka">Lozinka: *</label>
             <input id="lozinka" type="password" name="lozinka" placeholder="***********">
         </div>
         <div>
-            <label for="ponovi_lozinku">Ponovi lozinku</label>
+            <label for="ponovi_lozinku">Ponovi lozinku: *</label>
             <input id="ponovi_lozinku" type="password" name="ponovi_lozinku" placeholder="***********">
         </div>
   
@@ -35,6 +39,7 @@
           <button class="btn">Registruj se</button>
         </div>
     </form>
+    <script src="validator.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
