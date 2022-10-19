@@ -3,9 +3,9 @@ class Validator{
         this.elementsConfig = config;
         this.errors = { }
 
-        console.log(this.errors);
         this.generateErrorsObject();
         this.inputListener();
+        console.log(this.errors);
     }
 
     generateErrorsObject() {
@@ -30,6 +30,8 @@ class Validator{
         let field = e.target
         let fieldName = field.getAttribute("name");
         let fieldValue = field.value;
+
+        this.errors[fieldName] = [];
 
         if (elFields[fieldName].required) {
             if(fieldValue === ""){
