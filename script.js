@@ -40,4 +40,3 @@ let config = {
 
 
 let validator = new Validator(config);
-

@@ -3,6 +3,7 @@ class Validator{
         this.elementsConfig = config;
         this.errors = { }
 
+        console.log(this.errors);
         this.generateErrorsObject();
         this.inputListener();
     }
@@ -19,11 +20,21 @@ class Validator{
         for(let field in inputSelector) {
             let el = document.querySelector(`input[name="${field}"]`);
 
-            el.addEventListener("input", this.validate);
+            el.addEventListener("input", this.validate.bind(this));
         }
     }
 
     validate(e) {
-        console.log();
+        let elFields = this.elementsConfig;
+
+        let field = e.target
+        let fieldName = field.getAttribute("name");
+        let fieldValue = field.value;
+
+        if (elFields[fieldName].required) {
+            if(fieldValue === ""){
+                this.errors[fieldName].push("polje je prazno")
+            }
+        }
     }
 }
