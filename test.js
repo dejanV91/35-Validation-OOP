@@ -48,6 +48,14 @@ class Validator{
             this.errors[fieldName].push(`Polje morati imati minimalno ${elFields[fieldName].minLength} i maximalno ${elFields[fieldName].maxLength} karaktera`);
         }
 
+        
+        if (elFields[fieldName].zipBroj) {
+            let num = parseInt(fieldValue);
+            if (isNaN(num)) {
+                this.errors[fieldName].push("U polje se mogu upisati samo brojevi");
+            }
+        }
+
         if (elFields[fieldName].matching) {
             let matchingEl = document.querySelector(`input[name="${elFields[fieldName].matching}"]`);
 
@@ -56,11 +64,6 @@ class Validator{
             }else{
                 this.errors[fieldName] = [];
                 this.errors[matchingEl.name] = []
-            }
-
-            if (this.errors[fieldName] === 0) {
-                this.errors[fieldName] = [];
-                this.errors[elFields[fieldName].matching] = [];
             }
         }
         this.populateErrors(this.errors);

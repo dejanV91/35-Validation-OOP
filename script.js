@@ -26,7 +26,7 @@ let config = {
     "zip_broj": {
         minLength: 4,
         maxLength: 6,
-        typeData: "number"
+        zipBroj : true
     },
 
     "lozinka": {
