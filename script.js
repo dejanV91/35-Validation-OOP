@@ -23,6 +23,12 @@ let config = {
         maxLength: 13
     },
 
+    "zip_broj": {
+        minLength: 4,
+        maxLength: 6,
+        typeData: "number"
+    },
+
     "lozinka": {
         required: true,
         minLength: 7,

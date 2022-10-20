@@ -53,6 +53,9 @@ class Validator{
 
             if (fieldValue !== matchingEl.value) {
                 this.errors[fieldName].push("Lozinke se ne poklapaju");
+            }else{
+                this.errors[fieldName] = [];
+                this.errors[matchingEl.name] = []
             }
 
             if (this.errors[fieldName] === 0) {
